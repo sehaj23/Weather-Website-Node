@@ -59,7 +59,7 @@ app.get("/weather",(req,res)=>{
 })
 app.get("/about",(req,res)=>{
     res.render('about',{
-        name:"About Us",
+        name:"About",
         owner:"sehaj"
 
 
