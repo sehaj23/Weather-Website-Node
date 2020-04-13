@@ -4,10 +4,12 @@ const fs = require("fs")
 
 
 
+
 const LoadCityList=()=>{
 
     try {
-        const databuffer = fs.readFileSync("city.list.json");
+        
+        const databuffer = fs.readFileSync("./city.list.json");
         const  dataJSON = databuffer.toString();
       // console.log(dataJSON)
         return JSON.parse(dataJSON);
