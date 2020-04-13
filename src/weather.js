@@ -26,6 +26,7 @@ const getweather=(CityName,CountryCode,callback)=>{
     
 
     const cities = LoadCityList()
+  
    
     const RequestedCity = cities.filter((city) => city.name === CityName && city.country === CountryCode)
 
@@ -36,7 +37,7 @@ const getweather=(CityName,CountryCode,callback)=>{
 
     }else{
         const id = RequestedCity[0].id
-        console.log(id)
+      
     
     
         
