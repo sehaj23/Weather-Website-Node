@@ -21,7 +21,7 @@ hbs.registerPartials(partialsdirectory)
 app.use(express.static(publicdirectorypath))
 
 app.get("",(req,res)=>{
-   // res.send("<h1><Center>Hello Express!</center></h1>")
+  
     res.render('index',{
         name:"Weather",
         age:22,
@@ -74,7 +74,7 @@ app.get("/help",(req,res)=>{
 })
 app.get("/*",(req,res)=>{
     res.render("error",{
-        errormessage: "Sorry page not Found",
+        errorType: "Sorry page not Found",
         owner:"Sehaj"
     })
 })
