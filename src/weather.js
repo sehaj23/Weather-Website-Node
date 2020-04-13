@@ -1,6 +1,7 @@
 const request = require("request")
 const chalk = require("chalk")
 const fs = require("fs")
+const path = require("path")
 
 
 
@@ -9,9 +10,10 @@ const LoadCityList=()=>{
 
     try {
         
-        const databuffer = fs.readFileSync("./city.list.json");
+       const jsonDirectory = path.join(__dirname,"city.list.json")
+       const databuffer = fs.readFileSync(jsonDirectory);
         const  dataJSON = databuffer.toString();
-      // console.log(dataJSON)
+       
         return JSON.parse(dataJSON);
     } catch (error) {
         return []
@@ -78,6 +80,6 @@ const getweather=(CityName,CountryCode,callback)=>{
     
 }
    
-
+LoadCityList()
 module.exports.getweather = getweather;
 
