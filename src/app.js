@@ -3,6 +3,7 @@ const express = require("express")
 const hbs = require("hbs")
 const Case = require("../node_modules/case")
 const weather = require("./weather")
+const port = process.env.PORT || 3000
 
 
 // define paths for Express confid
@@ -32,7 +33,7 @@ app.get("",(req,res)=>{
 app.get("/weather",(req,res)=>{
     if(!req.query.address){
         return res.send({
-            error:"Please provide the address"
+            error:"Please provide the address!"
         })
     }else if(req.query.address && req.query.country){
 
@@ -79,7 +80,7 @@ app.get("/*",(req,res)=>{
 })
 
 
-app.listen(3000,()=>{
-    console.log("server is running")
+app.listen(port,()=>{
+    console.log("Server is Running")
 })
 
