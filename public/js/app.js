@@ -2,12 +2,6 @@
 
 console.log("Client side JS")
 
-// fetch("http://puzzle.mead.io/puzzle").then((response)=>{
-//     response.json().then((data)=>{
-//         console.log(data)
-//     })
-// })
-
 
 
 
@@ -32,6 +26,8 @@ weatherform.addEventListener("submit",(e)=>{
     response.json().then((data)=>{
         if(data.error){
             message1.textContent=data.error
+            message2.textContent=""
+            message3.textContent=""
         }else{
             message1.textContent="City :"+data.City
             message2.textContent="Temperature :"+data.Temperature

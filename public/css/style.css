@@ -4,11 +4,11 @@ body {
     max-width: 650px;
     margin: 0 auto;
     padding: 0 16px;
-
+ 
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: rgb(232, 255, 227);
+    background-color: rgb(201, 202, 218);
 }
 
 .main-content {
