@@ -28,7 +28,7 @@ weatherform.addEventListener("submit",(e)=>{
     const country = document.getElementById("country").value
     
    
-    fetch("http://localhost:3000/weather?address="+city+"&country="+country).then((response)=>{
+    fetch("/weather?address="+city+"&country="+country).then((response)=>{
     response.json().then((data)=>{
         if(data.error){
             message1.textContent=data.error
